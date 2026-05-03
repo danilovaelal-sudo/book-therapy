@@ -1151,6 +1151,7 @@ details p {
   }
 
   #about {
+    grid-template-columns: 1fr;
     align-items: start;
   }
 
@@ -1207,6 +1208,7 @@ details p {
   }
 
   #about {
+    grid-template-columns: 1fr;
     min-height: auto;
     padding-top: 3rem;
     padding-bottom: 3rem;
