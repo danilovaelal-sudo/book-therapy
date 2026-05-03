@@ -860,7 +860,7 @@ h3 {
 .review-card {
   position: relative;
   min-height: 21rem;
-  padding: 1rem 1.2rem 1.2rem;
+  padding: 1.55rem 1.2rem 1.2rem;
   background: var(--acid);
   transition:
     transform 0.18s ease,
@@ -869,13 +869,17 @@ h3 {
 
 .review-card::before {
   position: absolute;
-  top: 1.2rem;
-  right: 1rem;
-  width: 4.8rem;
-  height: 1rem;
-  background: var(--ink);
+  top: -0.9rem;
+  right: 1.2rem;
+  z-index: 2;
+  width: 2rem;
+  height: 3.7rem;
+  border: 5px solid var(--ink);
+  border-bottom-color: transparent;
+  border-radius: 1.4rem 1.4rem 0.4rem 0.4rem;
+  background: transparent;
   content: "";
-  transform: rotate(4deg);
+  transform: rotate(8deg);
 }
 
 .review-card:nth-child(even) {
@@ -884,14 +888,19 @@ h3 {
 
 .quote-mark {
   position: absolute;
-  top: 8.1rem;
-  left: 0.8rem;
-  font-size: 9rem;
+  right: 1rem;
+  bottom: 0.2rem;
+  z-index: 0;
+  color: rgba(32, 34, 31, 0.12);
+  font-size: 8rem;
   font-weight: 900;
   line-height: 1;
+  pointer-events: none;
 }
 
 .review-photo {
+  position: relative;
+  z-index: 1;
   width: 7.6rem;
   height: 7.6rem;
   margin: 0 0 1.35rem auto;
@@ -914,7 +923,7 @@ h3 {
 
 .review-card p {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   font-size: 1.35rem;
   font-weight: 850;
 }
