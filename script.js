@@ -22,6 +22,34 @@ document.querySelectorAll(".accordion details").forEach((item) => {
   });
 });
 
+const header = document.querySelector(".site-header");
+const menuToggle = document.querySelector(".menu-toggle");
+
+if (header && menuToggle) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = header.classList.toggle("is-open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+  });
+
+  document.querySelectorAll(".main-nav a").forEach((link) => {
+    link.addEventListener("click", () => {
+      header.classList.remove("is-open");
+      menuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
+}
+
+const toTop = document.querySelector(".to-top");
+
+if (toTop) {
+  const toggleToTop = () => {
+    toTop.classList.toggle("is-visible", window.scrollY > 520);
+  };
+
+  window.addEventListener("scroll", toggleToTop, { passive: true });
+  toggleToTop();
+}
+
 const cursor = document.querySelector(".cursor-follow");
 const canUseCustomCursor =
   cursor &&
