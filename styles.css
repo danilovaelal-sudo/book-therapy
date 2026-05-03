@@ -792,7 +792,7 @@ h3 {
 .review-card {
   position: relative;
   min-height: 21rem;
-  padding: 3.5rem 1.2rem 1.2rem;
+  padding: 1rem 1.2rem 1.2rem;
   background: var(--acid);
   transition:
     transform 0.18s ease,
@@ -801,17 +801,13 @@ h3 {
 
 .review-card::before {
   position: absolute;
-  top: 0.8rem;
-  right: 0.8rem;
-  width: 5.5rem;
-  height: 5.5rem;
-  border: var(--line);
-  background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.22)),
-    repeating-linear-gradient(45deg, #111 0 4px, #fff 4px 8px);
-  filter: grayscale(1);
+  top: 1.2rem;
+  right: 1rem;
+  width: 4.8rem;
+  height: 1rem;
+  background: var(--ink);
   content: "";
-  transform: rotate(5deg);
+  transform: rotate(4deg);
 }
 
 .review-card:nth-child(even) {
@@ -820,11 +816,32 @@ h3 {
 
 .quote-mark {
   position: absolute;
-  top: -1.2rem;
+  top: 8.1rem;
   left: 0.8rem;
   font-size: 9rem;
   font-weight: 900;
   line-height: 1;
+}
+
+.review-photo {
+  width: 7.6rem;
+  height: 7.6rem;
+  margin: 0 0 1.35rem auto;
+  border: var(--line);
+  box-shadow: 4px 4px 0 var(--ink);
+  filter: grayscale(1) contrast(1.08);
+  object-fit: cover;
+  object-position: center;
+  transform: rotate(3deg);
+}
+
+.review-card:nth-child(2) .review-photo {
+  object-position: 62% 44%;
+  transform: rotate(-3deg);
+}
+
+.review-card:nth-child(3) .review-photo {
+  object-position: 52% 35%;
 }
 
 .review-card p {
