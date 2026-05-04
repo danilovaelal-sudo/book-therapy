@@ -924,8 +924,25 @@ h3 {
 .review-card p {
   position: relative;
   z-index: 2;
+  margin-bottom: 0.75rem;
   font-size: 1.35rem;
   font-weight: 850;
+}
+
+.review-card cite {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  margin-top: 1rem;
+  padding: 0.35rem 0.55rem;
+  border: var(--line);
+  background: var(--paper);
+  box-shadow: 3px 3px 0 var(--ink);
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 900;
 }
 
 .author {
